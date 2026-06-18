@@ -1,0 +1,150 @@
+/* --- 1. Basic Setup & Colors --- */
+:root {
+    --primary-color: #2c3e50; /* A clean, professional dark blue/gray */
+    --background-color: #f4f4f9;
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 10px; /* Base padding for small mobile screens */
+}
+
+/* Accessibility: Hidden link that screen readers can see */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* --- 2. Mobile-First Layout (Default rules apply to screens ~360px) --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack menu items on top of each other for mobile */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+section {
+    background: var(--white);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Assignment Requirement: Tasteful Transition/Animation */
+button {
+    background-color: #27ae60; /* Green for action */
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    /* This makes the color change smoothly when you hover over it */
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+
+button:hover {
+    background-color: #219150;
+}
+
+button:active {
+    transform: scale(0.98); /* Slight click effect */
+}
+
+.search-bar {
+    margin-bottom: 15px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- 3. Responsive Breakpoints --- */
+
+/* Tablet (~768px) */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Put menu items side-by-side on larger screens */
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .stats-container {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.2rem;
+        background: #e8f4f8;
+        padding: 15px;
+        border-radius: 5px;
+    }
+}
+
+/* Desktop (~1024px) */
+@media (min-width: 1024px) {
+    body {
+        max-width: 900px;
+        margin: 0 auto; /* This centers your whole app on wide screens */
+        padding: 30px 0;
+    }
+
+    form {
+        max-width: 400px; /* Stops the form from stretching too wide */
+    }
+}
