@@ -1,7 +1,6 @@
 # Student Finance Tracker
-
+Link to Project:"https://ymutunzi-crypto.github.io/finance-tracker/"
 **Author:** Yannick Mutunzi
-**Program:** ALX / African Leadership University Front-End UI Assignment
 
 ## 📖 Project Overview
 The Student Finance Tracker is a lightweight, responsive web application designed to help students manage their daily budgets. It allows users to log expenses, categorize them, track their remaining budget against a target, and save their data locally. 
