@@ -1,5 +1,6 @@
 # Student Finance Tracker
 Link to Project:"https://ymutunzi-crypto.github.io/finance-tracker/"
+Video link for tutorial: " https://youtu.be/he4I3Llyu4A?si=ILUQ0owdYQDw6z2q "
 **Author:** Yannick Mutunzi
 
 ## 📖 Project Overview
