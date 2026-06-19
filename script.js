@@ -1,6 +1,7 @@
 // --- 1. Setup and Local Storage ---
 // We try to load saved data. If there is none, we start with an empty array [].
-let expenses = JSON.parse(localStorage.getItem('financeData')) || [];
+let savedData = JSON.parse(localStorage.getItem('financeData'));
+let expenses = Array.isArray(savedData) ? savedData : [];
 const budgetLimit = 500.00; // A static target for our dashboard
 
 // Get our HTML elements
